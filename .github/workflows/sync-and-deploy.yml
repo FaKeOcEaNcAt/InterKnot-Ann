@@ -27,7 +27,7 @@ jobs:
       changed: ${{ steps.archive.outputs.changed }}
       base: ${{ steps.checkout.outputs.commit }}
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         id: checkout
         with:
           ref: ${{ github.event_name == 'pull_request' && github.ref || github.event.repository.default_branch }}
@@ -58,7 +58,7 @@ jobs:
           fi
       - name: Upload changed archive
         if: github.event_name != 'pull_request' && steps.archive.outputs.changed == 'true'
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: inter-knot-archive
           path: data/announcements.json
@@ -66,9 +66,13 @@ jobs:
           retention-days: 1
       - name: Upload Pages site
         if: github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with:
           path: _site
+      - name: Explain why Pages publishing is skipped
+        if: github.event_name != 'pull_request' && github.event.repository.has_pages != true
+        run: |
+          echo 'GitHub Pages is disabled. The site artifact is available in this run. Enable Pages and select GitHub Actions in Settings → Pages, then dispatch the workflow again.' >> "$GITHUB_STEP_SUMMARY"
 
   persist:
     needs: build
@@ -78,11 +82,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           ref: ${{ needs.build.outputs.base }}
           persist-credentials: true
-      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
         with:
           name: inter-knot-archive
           path: ${{ runner.temp }}/inter-knot-archive
@@ -102,7 +106,7 @@ jobs:
 
   deploy:
     needs: [build, persist]
-    if: ${{ always() && !cancelled() && github.event_name != 'pull_request' && needs.build.result == 'success' && (needs.persist.result == 'success' || (needs.persist.result == 'skipped' && needs.build.outputs.changed == 'false')) }}
+    if: ${{ always() && !cancelled() && github.event_name != 'pull_request' && github.event.repository.has_pages == true && needs.build.result == 'success' && (needs.persist.result == 'success' || (needs.persist.result == 'skipped' && needs.build.outputs.changed == 'false')) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     permissions:
@@ -112,5 +116,5 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
+      - uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
         id: deployment

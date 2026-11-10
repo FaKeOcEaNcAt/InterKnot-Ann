@@ -30,7 +30,7 @@ python -m scripts.sync
 
 1. 在 GitHub 新建一个空仓库。上传项目源文件，使用 `.gitignore` 排除生成目录、本地截图和测试缓存。通过 Git 推送时可在本目录执行 `git init -b main`、`git add .`、`git commit -m "Initial Inter-Knot site"`，再按 GitHub 提示添加 `origin` 并推送默认分支。
 2. 在 Settings → Actions → General 启用 GitHub Actions 和 GitHub 官方 Actions。自动归档需要工作流的 `persist` Job 可以使用 `GITHUB_TOKEN` 向默认分支推送。若默认分支规则阻止该操作，应按仓库权限策略处理，并保持写权限仅授予持久化任务。
-3. 在 Settings → Pages 中把 Source 设为 GitHub Actions。首次推送若早于 Pages 配置，在 Actions → Sync and deploy Inter-Knot → Run workflow，选择默认分支并勾选 `build_only`，发布已有档案。Pages 环境可限定为默认分支。
+3. 在 Settings → Pages 中把 Source 设为 GitHub Actions。Pages 未启用时，工作流会生成可下载的站点产物并跳过发布。GitHub Free 的 Pages 适用于公开仓库，个人私有仓库需要 GitHub Pro，且发布的 Pages 站点可公开访问。配置完成后，在 Actions → Sync and deploy Inter-Knot → Run workflow 选择默认分支并勾选 `build_only`，发布已有档案。Pages 环境可限定为默认分支。
 4. 取消勾选 `build_only` 可手动尝试采集。打开 run 的 Summary 和 Build → Synchronize official announcements 查看结果。采集失败、测试失败或归档写入失败时，采集工作流不会部署。默认分支的代码推送会构建并部署仓库中已审核的归档。
 5. 默认项目站点地址是 `https://<owner>.github.io/<repository>/`。配置自定义域名时，在 Pages 设置添加并验证域名，按 GitHub 指引设置 DNS，等证书签发后启用 Enforce HTTPS。页面和静态资源使用相对路径。 [Pages 工作流](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) · [管理自定义域名](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
 
