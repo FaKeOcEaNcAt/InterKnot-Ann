@@ -3,7 +3,7 @@ from pathlib import PurePosixPath
 from urllib.parse import urlsplit
 
 from scripts.build import OUT, SOURCES
-from scripts.model import BILI_ID, OFFICIAL, OFFICIAL_ID, ORIGIN, REMOTE_IMAGE, decode, require
+from scripts.model import BILI_ID, OFFICIAL_ID, ORIGIN, REMOTE_IMAGE, canonical, decode, require
 
 PUBLIC_ASSET = {"site.css", "app.js"}
 LINK_ATTR = {"a": "href", "img": "src", "link": "href", "script": "src"}
@@ -32,9 +32,10 @@ class Page(HTMLParser):
                             "unsafe remote image")
                     return
                 bili = href.startswith(ORIGIN + "/opus/") and BILI_ID.fullmatch(parts.path[6:])
-                official = href.startswith(OFFICIAL + "/zh-cn/news/") and OFFICIAL_ID.fullmatch(
-                    "hoyo-" + parts.path.rsplit("/", 1)[-1]
-                ) and parts.path.count("/") == 3
+                number = parts.path.rsplit("/", 1)[-1]
+                official = OFFICIAL_ID.fullmatch("hoyo-" + number) and href in (
+                    canonical("hoyo-" + number), canonical("mihoyo-" + number)
+                )
                 require(tag == "a" and (href in {url for _, url in SOURCES}
                         or ((bili or official)
                             and not parts.query and not parts.fragment)),

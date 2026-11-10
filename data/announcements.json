@@ -1,7 +1,23 @@
 {
   "schema": 1,
-  "last_changed_sync": "2026-11-10T14:17:00+08:00",
+  "last_changed_sync": "2026-11-10T15:17:29+08:00",
   "items": [
+    {
+      "id": "mihoyo-167302",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "3.3版本「商城」上新说明",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-11-10T12:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/167302",
+      "is_pinned": false,
+      "content_hash": "08f6fa3ce0307c416f2ba7544802941314ea9c886bacae1efea5e1367859ab13",
+      "ingest": "feed"
+    },
     {
       "id": "hoyo-167272",
       "source": "hoyoverse",
@@ -16,6 +32,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/167272",
       "is_pinned": false,
       "content_hash": "ca39e4ce673bc39d07cb1c6da8bfd4c6ba042543836ebb416b0832ee2d4de31b",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-167290",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「『嗯呢』从天降」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/11/11 10:00 至 2026/12/01 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-11-09T14:30:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/167290",
+      "is_pinned": false,
+      "content_hash": "3465bd9a0188f55dac3e7a742fb0cbda558dcf8866b83a0197c04a3f0dee1901",
       "ingest": "feed"
     },
     {
@@ -35,6 +67,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-167289",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「跛脚乌鸦奇踪记」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/11/11 10:00 至 2026/11/30 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-11-09T14:15:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/167289",
+      "is_pinned": false,
+      "content_hash": "81c061dbe97c1ca2e7929591c75d5cf8d12ea2b6bec08f25f84f8b0ca847eb17",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-167270",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -48,6 +96,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/167270",
       "is_pinned": false,
       "content_hash": "8cad5bad9d40456509525ac6266492cf6fb2006ed55849ad887a306a3a3dc661",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-167288",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "3.3版本限时频段（下期）",
+      "category": "signal",
+      "summary": "调频时段：2026/11/11 12:00 至 2026/12/01 14:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-11-09T14:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/167288",
+      "is_pinned": false,
+      "content_hash": "887012da9973071f4caba285a240eefeadb32d923ad8ebe292ed157fdeccb342",
       "ingest": "feed"
     },
     {
@@ -67,6 +131,54 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-167279",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "《绝区零》☆Zenless LIVE 2026——FES专场 情报公开",
+      "category": "event",
+      "summary": "官网发布了活动及参与安排。具体时间、条件和奖励请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-11-07T17:35:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/167279",
+      "is_pinned": false,
+      "content_hash": "ae45eff6f3f3a63d3740ec5bb70c829c2dffb7e692da48f7a6060e1cb1c29fc3",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-167278",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "《绝区零》2026 FES | 布梦嘉年华 情报公开",
+      "category": "event",
+      "summary": "官网发布了活动及参与安排。具体时间、条件和奖励请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-11-07T17:30:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/167278",
+      "is_pinned": false,
+      "content_hash": "9362e211c890e0fefad8edd3e9b3975fd67d52b719058877895a050acedeae9c",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-167256",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "《绝区零》对iPhone Duo机型的适配说明",
+      "category": "system",
+      "summary": "官网发布了系统调整、适配或问题修复说明。具体内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-11-05T14:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/167256",
+      "is_pinned": false,
+      "content_hash": "f8ef9e6f4f26f1fd2678839435aececa684ffe3f2dbbdf235313f55006058c04",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-167249",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -80,6 +192,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/167249",
       "is_pinned": false,
       "content_hash": "b03f10cd395b805f011554767b83a58ec12bb6211a7b3c6116273ee2c1ee97a0",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-167166",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「先遣赏金-区域巡防」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/11/04 04:00 至 2026/11/09 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-11-02T12:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/167166",
+      "is_pinned": false,
+      "content_hash": "aa687d39d24aff5691da2c2018a0c027cc34d3c45602e62c7034551d862398d7",
       "ingest": "feed"
     },
     {
@@ -99,6 +227,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-167045",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「赛博圣手，出诊!」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/10/28 10:00 至 2026/11/16 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-10-26T12:30:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/167045",
+      "is_pinned": false,
+      "content_hash": "13d93482c3a105c08516a9100023f9ccd97f008dadeddf71db9969f04dc3e669",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-167038",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -112,6 +256,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/167038",
       "is_pinned": false,
       "content_hash": "c8b25e743d19c1e081e2e38dc69ce5fc20d726859feca3280abc8e0f5fd11446",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-166995",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「怪奇诡屋惊魂记」活动介绍",
+      "category": "event",
+      "summary": "官网发布了活动及参与安排。具体时间、条件和奖励请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-10-21T12:30:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166995",
+      "is_pinned": false,
+      "content_hash": "f3c2fb2b82892cc165139f40e2e05fee0bb0ec84697e7d4bf0c5faea33737cfd",
       "ingest": "feed"
     },
     {
@@ -167,6 +327,22 @@
       "ingest": "editorial"
     },
     {
+      "id": "mihoyo-166990",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "重返天空的旅程丨3.3版本内容一览（上期）",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-10-21T11:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166990",
+      "is_pinned": false,
+      "content_hash": "f945fb18b16e22ec3bbaa8713364f8d36b9cdb79a4be98cce58c2783b3388b6f",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-166964",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -180,6 +356,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/166964",
       "is_pinned": false,
       "content_hash": "5a58150c48a33a1479aff74d3c889946e8956e4add90cc1ed2528f4b245b75b5",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-166989",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "3.3版本「重返天空的旅程」更新公告",
+      "category": "version",
+      "summary": "官网发布了版本内容、更新安排及相关说明。具体变动请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-10-21T07:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166989",
+      "is_pinned": false,
+      "content_hash": "13255bb596b7cdac1cd6f52c48b41fb2f5ccc184263ea7079f7bc0e7d4eed59c",
       "ingest": "feed"
     },
     {
@@ -199,6 +391,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-166971",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「怪奇诡屋惊魂记」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/10/22 10:00 至 2026/11/30 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-10-20T14:30:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166971",
+      "is_pinned": false,
+      "content_hash": "a2e7991f72b0092554347858e0275418788318765987931b9f7b478ab73fd4e1",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-166946",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -212,6 +420,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/166946",
       "is_pinned": false,
       "content_hash": "71869e93b9aeed312f7c6de9489ee91efd3111ebef37e9aa6f0d1d75b402247b",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-166970",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「全新放送」活动说明",
+      "category": "event",
+      "summary": "活动时段：3.3版本更新后 至 2026/12/01 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-10-20T14:15:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166970",
+      "is_pinned": false,
+      "content_hash": "5a20baa1be74a0d9f1e48189f4b49d5c2d83485c100444ce783a4af38e4e0d6c",
       "ingest": "feed"
     },
     {
@@ -231,6 +455,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-166969",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "3.3版本「丽都城募」说明",
+      "category": "event",
+      "summary": "活动时段：3.3版本更新后 至 2026/11/30 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-10-20T14:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166969",
+      "is_pinned": false,
+      "content_hash": "432d911ef1dbc63aac486d42bc633c65c70a831d8e034f86d6bc29acc89bc640",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-166944",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -244,6 +484,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/166944",
       "is_pinned": false,
       "content_hash": "f55f6a47bba583bc179355bf1aa4d2079a506f85464aa71158c4a655b4f7bf85",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-166951",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "丽都修葺漫谈Vol.15丨系统优化篇",
+      "category": "system",
+      "summary": "官网发布了系统调整、适配或问题修复说明。具体内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-10-20T12:30:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166951",
+      "is_pinned": false,
+      "content_hash": "a2dcd9c064ec75fab21152761e83e56d958dd59c356492af8793a25a99674a2a",
       "ingest": "feed"
     },
     {
@@ -263,6 +519,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-166923",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "新剧情：主线第三季第四章「重返天空的旅程」",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-10-19T14:30:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166923",
+      "is_pinned": false,
+      "content_hash": "bfbba36b29ba69ab966128d8cb02e87b44eb0c7f697b57364ab664a6b59b1394",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-166928",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -276,6 +548,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/166928",
       "is_pinned": false,
       "content_hash": "7528aebf9e64991086179de5b8c1dd1b4ac1212b45aa5cf26c00a82f93ca2387",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-166935",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "3.3版本「商城」上新说明",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-10-19T14:15:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166935",
+      "is_pinned": false,
+      "content_hash": "0544416309c447a5dfe3ba4cb05c878488f68cdf65203615647bb68f026be165",
       "ingest": "feed"
     },
     {
@@ -295,6 +583,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-166922",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "3.3版本限时频段（上期）",
+      "category": "signal",
+      "summary": "调频时段：3.3版本更新后 至 2026/11/11 11:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-10-19T14:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166922",
+      "is_pinned": false,
+      "content_hash": "969802e78bd2e44e787b752bf218088f66fe6d02c60c04bdbd75efb8c98168ac",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-166926",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -311,6 +615,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-166921",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "3.3版本「重返天空的旅程」预下载开启&更新通知",
+      "category": "version",
+      "summary": "官网发布了版本内容、更新安排及相关说明。具体变动请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-10-19T12:05:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166921",
+      "is_pinned": false,
+      "content_hash": "bdac144f5ba11ef21ff5723590b6ca42aa8677643dc4a678efb275c8dfd56baa",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-166925",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -324,6 +644,38 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/166925",
       "is_pinned": false,
       "content_hash": "0777335f81bd60897f604c85d2629a7f7c04db452f46646610675d243fe3fe05",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-166933",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "新品情报丨客制化三模键盘等多款周边上新",
+      "category": "event",
+      "summary": "活动时段：2026/10/20 20:00 至 2026/11/11 23:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-10-19T12:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166933",
+      "is_pinned": false,
+      "content_hash": "4339324bd00e588ad98eeb26cd999c85a570f6b55a467e14adbffc0c38aa338a",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-166677",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「数据悬赏-实战模拟」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/10/14 04:00 至 2026/10/19 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-10-12T12:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166677",
+      "is_pinned": false,
+      "content_hash": "fe764e6cbef79fc42723affd5e608989d9d593e71c989a81629b76a9d7b78767",
       "ingest": "feed"
     },
     {
@@ -356,6 +708,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/166647",
       "is_pinned": false,
       "content_hash": "24c56ca1ac898bc0fb91954a816ae92c1709e81159446ebd7fa9911480135817",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-166652",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "《绝区零》3.3版本「重返天空的旅程」前瞻特别节目",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-10-09T20:20:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166652",
+      "is_pinned": false,
+      "content_hash": "8988f6729a9ebc367611235d539fbfa1ba53da2fbb22c2fc360c7c922adc6812",
       "ingest": "feed"
     },
     {
@@ -431,6 +799,22 @@
       "ingest": "editorial"
     },
     {
+      "id": "mihoyo-166570",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「跛脚乌鸦奇探录」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/10/03 10:00 至 2026/10/19 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-10-01T12:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166570",
+      "is_pinned": false,
+      "content_hash": "84f910be7d09496d89dc82118b9a6f11bb9a9b5ac9ceb1d59ca5d83dc970dbb7",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-166498",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -444,6 +828,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/166498",
       "is_pinned": false,
       "content_hash": "c7fe000c57ca1eb83ec178d7b5ced0711d05e417fc359b0d1b701be613c897e8",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-166549",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "她与她的隐秘往事丨3.2版本内容一览（下期）",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-30T12:15:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166549",
+      "is_pinned": false,
+      "content_hash": "236c0650517a520d9cf98d2adf41c77743e41eb9b07e51ca610febf8c1f4f7f3",
       "ingest": "feed"
     },
     {
@@ -463,6 +863,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-166515",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「锵锵！球仔成长日记」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/09/30 10:00 至 2026/10/19 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-28T12:30:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166515",
+      "is_pinned": false,
+      "content_hash": "9fd437b54bb5764efec89b8e5efba1c0980474c56d5b2d70b57ae35e898f1223",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-166476",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -476,6 +892,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/166476",
       "is_pinned": false,
       "content_hash": "717a32496d1561db6e390d55ce67f4c15409fe31fbde2fd4ff4f9c242207e89b",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-166512",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "3.2版本限时频段（下期）",
+      "category": "signal",
+      "summary": "官网发布了限时调频安排。频段、适用角色和开放时间请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-28T12:15:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166512",
+      "is_pinned": false,
+      "content_hash": "490b602e9c5e4c67e181ba3fe639035682fafb07608508db567badbabbe32d5f",
       "ingest": "feed"
     },
     {
@@ -495,6 +927,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-166226",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「先遣赏金-区域巡防」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/09/23 04:00 至 2026/09/28 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-21T12:30:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166226",
+      "is_pinned": false,
+      "content_hash": "28f6884832d7549bb67eaf676add9ee7c3e83d623d93d0e41c5dd94d1b01af6f",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-166192",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -508,6 +956,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/166192",
       "is_pinned": false,
       "content_hash": "fc33d6e8d6b1679e80e35b28ddc1bfb3cd621a494cbf916a19d99bb1ab6c5668",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-166202",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「惊喜放映企划」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/09/23 10:00 至 2026/10/20 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-21T12:15:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166202",
+      "is_pinned": false,
+      "content_hash": "36ae9a05ddea4afc9b2061a57323015d8358f5c2803e897c43ea581feb3ff6f9",
       "ingest": "feed"
     },
     {
@@ -527,6 +991,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-166108",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「虚境逐影争锋」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/09/16 10:00 至 2026/10/05 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-14T12:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166108",
+      "is_pinned": false,
+      "content_hash": "69aaead7fd6d90c3f4913d7df5ea6d4e07debe41e08f7fd0c0bb1d452593812f",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-166073",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -540,6 +1020,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/166073",
       "is_pinned": false,
       "content_hash": "f605b6607a05b470e60a0597369adaa1af5467347482a1106ecde8169a697d96",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-166031",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「『弹球勇者』哐哐当！」活动介绍",
+      "category": "event",
+      "summary": "官网发布了活动及参与安排。具体时间、条件和奖励请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-09T12:30:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166031",
+      "is_pinned": false,
+      "content_hash": "dfd4c2e2ca23b4273226d419e9ec6feea8654253b3733c2f6fde1da39ce831fb",
       "ingest": "feed"
     },
     {
@@ -559,6 +1055,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-166028",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "🎁维尔乌姆假日相册",
+      "category": "event",
+      "summary": "官网发布了活动及参与安排。具体时间、条件和奖励请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-09T12:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166028",
+      "is_pinned": false,
+      "content_hash": "03efdc3136524d55ab1eb999372c856685973e6fa91740aa596932f858102877",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-166024",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -572,6 +1084,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/166024",
       "is_pinned": false,
       "content_hash": "701c5dc327ab36cb477a13cc7a7ce7bffdf47bb5a820792907d20cb9ded55c95",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-166027",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "她与她的隐秘往事丨3.2版本内容一览（上期）",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-09T11:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166027",
+      "is_pinned": false,
+      "content_hash": "3756a2d2239f70760aea224bf56d97021b76e63d31bd0e08511704f607b6718c",
       "ingest": "feed"
     },
     {
@@ -591,6 +1119,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-166026",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "3.2版本「她与她的隐秘往事」更新公告",
+      "category": "version",
+      "summary": "官网发布了版本内容、更新安排及相关说明。具体变动请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-09T07:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166026",
+      "is_pinned": false,
+      "content_hash": "c289442af957a50b2476fc77506b1f5ceaef4b26a40e951594bcbb9324ebd296",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-166000",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -604,6 +1148,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/166000",
       "is_pinned": false,
       "content_hash": "837e7d754d2bc27760fee98132038c0e92b32bc7d96bbea4e4667bc22704a4f5",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-166019",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "丽都修葺漫谈Vol.14丨系统&玩法篇",
+      "category": "system",
+      "summary": "官网发布了系统调整、适配或问题修复说明。具体内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-08T18:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166019",
+      "is_pinned": false,
+      "content_hash": "e51f214f7b971f0e824c5b709c6ccc4d3d90ce16053153bd6834bb8de7154435",
       "ingest": "feed"
     },
     {
@@ -639,6 +1199,38 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-166018",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "3.2版本「商城」上新说明",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-08T15:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166018",
+      "is_pinned": false,
+      "content_hash": "3348b1b3e1254f7b1e78624d0fa0637e6fba6086a1dc5246a090206387462a9d",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-166016",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「『弹球勇者』哐哐当！」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/09/10 10:00 至 2026/10/19 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-08T13:30:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166016",
+      "is_pinned": false,
+      "content_hash": "055adebffa4b8e0932775cf347261def53c7f1a1e5b69719d80c1615f66c62f5",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-165998",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -652,6 +1244,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/165998",
       "is_pinned": false,
       "content_hash": "00d3c87fb18890185f439be848cfb82ea549d3685c157051080a516bfbb42135",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-166014",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「全新放送」活动说明",
+      "category": "event",
+      "summary": "活动时段：3.2版本更新后 至 2026/10/20 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-08T13:15:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166014",
+      "is_pinned": false,
+      "content_hash": "d9de3654655f7a847aa812ac32ded5e40e6ef2297960f4ed2c19ad76e96da829",
       "ingest": "feed"
     },
     {
@@ -671,6 +1279,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-166013",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「潜能预演·烈火重锤」活动说明",
+      "category": "event",
+      "summary": "官网发布了活动及参与安排。具体时间、条件和奖励请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-08T13:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166013",
+      "is_pinned": false,
+      "content_hash": "16c85069cd7a10c52af48dd6de6ced45c457a8cfe408eee45e72234eacacd495",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-165996",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -687,6 +1311,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-166012",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "3.2版本「丽都城募」说明",
+      "category": "event",
+      "summary": "活动时段：3.2版本更新后 至 2026/10/19 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-08T12:45:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166012",
+      "is_pinned": false,
+      "content_hash": "9f66a367e749444890e90e9f9bf78769e503aed9d05e30b3fe2e9b1dccf8458f",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-165995",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -700,6 +1340,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/165995",
       "is_pinned": false,
       "content_hash": "f90bfb47d57e4ccf172623bcf35fbc809df3755a957c76e22a9aa271feeb4fe8",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-165993",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "新剧情：主线第三季第三章「她与她的隐秘往事」",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-07T13:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/165993",
+      "is_pinned": false,
+      "content_hash": "57ed529922d5e6f48e032b85bfbb716b511c09fbd9453829729310dc979cff19",
       "ingest": "feed"
     },
     {
@@ -759,6 +1415,22 @@
       "ingest": "editorial"
     },
     {
+      "id": "mihoyo-166009",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「天使应援大作战」活动说明",
+      "category": "event",
+      "summary": "活动时段：3.2版本更新后 至 2026/11/30 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-07T12:45:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/166009",
+      "is_pinned": false,
+      "content_hash": "195e5fa9ee3e294b2da657bca36714dc196d8a0ebf00f392095806a7346d34c4",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-165980",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -772,6 +1444,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/165980",
       "is_pinned": false,
       "content_hash": "a59e181a12fc1ec881a9c3e8e495b0f3b36b5be5693fe14e8e13750a9ca11eda",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-165991",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "3.2版本限时频段（上期）",
+      "category": "signal",
+      "summary": "调频时段：3.2版本更新后 至 2026/09/30 11:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-07T12:30:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/165991",
+      "is_pinned": false,
+      "content_hash": "ff03223e5c9f442bf9b33d259f2859f5a8b6eba9401f0a45c6af7658d571948f",
       "ingest": "feed"
     },
     {
@@ -791,6 +1479,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-165990",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "3.2版本「她与她的隐秘往事」预下载开启&更新通知",
+      "category": "version",
+      "summary": "官网发布了版本内容、更新安排及相关说明。具体变动请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-07T12:05:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/165990",
+      "is_pinned": false,
+      "content_hash": "d19c3e01688b6fb48180d0141b3236e6b1983d58a35b272f24613144ed9b7e46",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-165978",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -807,6 +1511,38 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-165950",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "新品情报丨2026AW服饰等多款周边上新",
+      "category": "event",
+      "summary": "活动时段：2026/9/3 20:00 至 2026/9/23 23:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-09-01T12:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/165950",
+      "is_pinned": false,
+      "content_hash": "f84920997724b3457e52e1d5ac788e20842d9b8a49e3c679d724950392d729dc",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-165945",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「实战特训-三倍悬赏」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/09/02 04:00 至 2026/09/07 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-08-31T12:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/165945",
+      "is_pinned": false,
+      "content_hash": "7f27f25cb5633cd7b7def315c03b927700213234768444182a0d5a32be211b59",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-165921",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -820,6 +1556,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/165921",
       "is_pinned": false,
       "content_hash": "741445f9476d960a7514624831e8caeb1e43aa0f1d413a1bd2dbb9a75b4ca0c8",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-165936",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "《绝区零》3.2 版本「她与她的隐秘往事」前瞻特别节目",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-08-28T20:15:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/165936",
+      "is_pinned": false,
+      "content_hash": "b295294c30d8219bdd26397a7f7110fbfb0174e563eb0e76c5d4c9b02dc85e62",
       "ingest": "feed"
     },
     {
@@ -855,6 +1607,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-165890",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「叮咚！见习邮差派件中」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/08/28 10:00 至 2026/09/14 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-08-26T12:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/165890",
+      "is_pinned": false,
+      "content_hash": "91f590fab7c5cf71991b960ec89f1a4f504ec47470b1d109fc5dd68b97420141",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-165881",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -887,6 +1655,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-165838",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「极危通缉与悠游假期」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/08/24 10:00 至 2026/09/07 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-08-21T12:15:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/165838",
+      "is_pinned": false,
+      "content_hash": "91bccba307fbfc350697e6039ebe2f071bcce219c906eac339f0c2c122277b45",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-165829",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -900,6 +1684,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/165829",
       "is_pinned": false,
       "content_hash": "74af2ba758cf5c56a135f03ad50402a8d2dcf5031654eb3a411b8748cdbc4a07",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-165800",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "漫长的告别丨3.1版本内容一览（下期）",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-08-19T12:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/165800",
+      "is_pinned": false,
+      "content_hash": "b5c69226e7f18eeb137657cd5d23b2607d3f3b4a1e387c1530d737aa8e18f8e2",
       "ingest": "feed"
     },
     {
@@ -919,6 +1719,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-165762",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「咔滋酥脆出餐计划」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/08/19 10:00 至 2026/09/07 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-08-17T13:45:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/165762",
+      "is_pinned": false,
+      "content_hash": "391ef54c6504888f57a43b783f772b0295f95659d09b2058177f64cb32e243fb",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-165741",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -935,6 +1751,22 @@
       "ingest": "feed"
     },
     {
+      "id": "mihoyo-165760",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「『嗯呢』大派送！」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/08/19 10:00 至 2026/09/08 03:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-08-17T13:30:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/165760",
+      "is_pinned": false,
+      "content_hash": "f346ab69af4ffd9fcc059d9ed5fe8dbcec8a6c83b18fb435728a8fca93b46d50",
+      "ingest": "feed"
+    },
+    {
       "id": "hoyo-165740",
       "source": "hoyoverse",
       "source_uid": "288",
@@ -948,6 +1780,22 @@
       "source_url": "https://zenless.hoyoverse.com/zh-cn/news/165740",
       "is_pinned": false,
       "content_hash": "0d9bba706506676ba01d8eebd67ca4f85c79bb3887e6eb39533ee1a4371eff57",
+      "ingest": "feed"
+    },
+    {
+      "id": "mihoyo-165759",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "3.1版本「商城」上新说明",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-08-17T13:15:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/165759",
+      "is_pinned": false,
+      "content_hash": "e76f6b33315c4697fedf6ba4408abf83a0b8384440fab1b9e9e681f9ddb5d9b2",
       "ingest": "feed"
     },
     {
@@ -1001,6 +1849,22 @@
       "is_pinned": false,
       "content_hash": "4694800d4899a1731f2a27c70558bae9c9733c967d246d0a3c94ad34fa4910be",
       "ingest": "editorial"
+    },
+    {
+      "id": "mihoyo-165758",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "3.1版本限时频段（下期）",
+      "category": "signal",
+      "summary": "调频时段：2026/08/19 12:00 至 2026/09/08 14:59（服务器时间）。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-08-17T13:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/165758",
+      "is_pinned": false,
+      "content_hash": "ac68fbfc2e9c634371063974d5d710c9c9da6a943060b23c3fe8bcfa537c0fd9",
+      "ingest": "feed"
     },
     {
       "id": "hoyo-165737",

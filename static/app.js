@@ -6,6 +6,9 @@
     var request = root.requestFullscreen || root.msRequestFullscreen || root.webkitRequestFullscreen;
     var exit = document.exitFullscreen || document.msExitFullscreen || document.webkitExitFullscreen;
     var windowsPhone = /Windows Phone/i.test(navigator.userAgent);
+    if (windowsPhone) {
+        root.className += " windows-phone";
+    }
 
     function isFullscreen() {
         return document.fullscreenElement || document.msFullscreenElement || document.webkitFullscreenElement;
@@ -85,7 +88,7 @@
         var description = document.createElement("p");
         link.href = "post-" + row[0] + ".html";
         link.textContent = row[1];
-        description.textContent = row[4] + " · " + row[3];
+        description.textContent = row[4] + (row[6] ? " · " + row[6] : "") + " · " + row[3];
         item.appendChild(link);
         item.appendChild(description);
         return item;
@@ -146,7 +149,7 @@
                 }
                 var fragment = document.createDocumentFragment();
                 rows.forEach(function (row) {
-                    if (!Array.isArray(row) || !/^(?:[1-9][0-9]{14,21}|hoyo-[1-9][0-9]{3,11})$/.test(row[0]) ||
+                    if (!Array.isArray(row) || !/^(?:[1-9][0-9]{14,21}|(?:hoyo|mihoyo)-[1-9][0-9]{3,11})$/.test(row[0]) ||
                             (category && row[2] !== category)) {
                         return;
                     }

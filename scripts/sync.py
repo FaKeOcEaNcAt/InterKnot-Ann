@@ -83,6 +83,9 @@ def main():
         cutoff = three_months_ago(current)
         if adapter == "hoyoverse-official":
             incoming, first_ids = official.collect(count, interval, excluded, cutoff, current)
+            cn, cn_first_ids = official.collect(count, interval, excluded, cutoff, current, source="mihoyo")
+            incoming.update(cn)
+            first_ids.update(cn_first_ids)
         else:
             incoming, first_ids = collect(count, interval, excluded, cutoff)
         now = current.isoformat(timespec="seconds")

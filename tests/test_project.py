@@ -186,6 +186,11 @@ class BuildTest(unittest.TestCase):
             tabs = home.split('aria-label="公告分类">', 1)[1].split("</nav>", 1)[0]
             self.assertEqual(tabs.count("<a "), 3)
             self.assertIn("category-notice.html", tabs)
+            settings = (out / "settings.html").read_text(encoding="utf-8")
+            for source in ("bilibili", "mihoyo", "hoyoverse"):
+                self.assertIn("index-" + source + ".html", settings)
+            source_home = (out / "index-bilibili.html").read_text(encoding="utf-8")
+            self.assertIn("category-event-bilibili.html", source_home)
             self.assertIn("category-event-2.html", (out / "category-event.html").read_text(encoding="utf-8"))
             article = (out / build.article_path(item)).read_text(encoding="utf-8")
             self.assertIn("&lt;img", article)
@@ -232,6 +237,10 @@ class OfficialTest(unittest.TestCase):
         self.assertEqual(record["category"], "event")
         self.assertIn("2026/12/01 03:59", record["summary"])
         self.assertNotIn("script", repr(record))
+        cn_row = dict(rows[0], iInfoId=161243, sChanId=["279"])
+        _, _, cn = official.normalize(cn_row, set(), source="mihoyo")
+        self.assertEqual(cn["source"], "mihoyo")
+        self.assertEqual(cn["source_url"], "https://zzz.mihoyo.com/news/161243")
         with self.assertRaises(Invalid):
             official.normalize(dict(rows[0], sChanId=["wrong"]), set())
         with self.assertRaises(Invalid):

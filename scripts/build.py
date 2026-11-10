@@ -48,16 +48,18 @@ def article_path(item):
     return "post-" + item["id"] + ".html"
 
 
-def list_path(category, page=1):
+def list_path(category, page=1, source=None):
     stem = "index" if category == "all" else "category-" + category
+    if source:
+        stem += "-" + source
     return stem + ".html" if page == 1 else stem + "-" + str(page) + ".html"
 
 
-def tabs(selected):
+def tabs(selected, source=None):
     if selected in CATEGORIES and selected != "event":
         selected = "notice"
     return '<nav class="filters" aria-label="公告分类">{}</nav>'.format("".join(
-        local(list_path(key), label, ' aria-current="page"' if selected == key else "")
+        local(list_path(key, source=source), label, ' aria-current="page"' if selected == key else "")
         for key, label in FEED_TABS
     ))
 
@@ -107,7 +109,7 @@ def card(item, remote):
              time_tag(item["published_at"]), category)
 
 
-def listing(items, category, page, pages, remote):
+def listing(items, category, page, pages, remote, source=None):
     title = {"all": "绳网公告", "notice": "公告"}.get(category)
     if title is None:
         title = CATEGORIES[category][0]
@@ -116,12 +118,14 @@ def listing(items, category, page, pages, remote):
     )
     pagination = []
     if page > 1:
-        pagination.append(local(list_path(category, page - 1), "‹ 上一页"))
+        pagination.append(local(list_path(category, page - 1, source), "‹ 上一页"))
     pagination.append("<span>第 {} / {} 页</span>".format(page, pages))
     if page < pages:
-        pagination.append(local(list_path(category, page + 1), "下一页 ›"))
+        pagination.append(local(list_path(category, page + 1, source), "下一页 ›"))
     body = (
-        '<div class="feed-head"><h1><i aria-hidden="true"></i> {}</h1>{}</div>'.format(title, tabs(category))
+        '<div class="feed-head"><h1><i aria-hidden="true"></i> {}</h1>{}</div>'.format(
+            SOURCE_LABELS[source] if source else title, tabs(category, source)
+        )
         + content + '<nav class="pagination" aria-label="公告分页">{}</nav>'.format("".join(pagination))
     )
     return title, body
@@ -153,8 +157,8 @@ def detail(item, newer, older, remote):
         '<p class="reader-meta">{} · {} · {}</p>'
         '<section class="article-copy"><h2>公告摘要</h2><p class="lead">{}</p>{}</section>'
         '<p>{}</p></article><nav class="neighbors" aria-label="相邻公告">{}</nav>'
-    ).format(local("index.html", "‹ 返回公告"), local(list_path("event" if item["category"] == "event" else "notice"), category),
-             item["id"], escape(item["title"]), SOURCE_LABELS[item["source"]], category, metadata,
+    ).format(local(list_path("all", source=item["source"]), "‹ 返回该来源"), local(list_path("event" if item["category"] == "event" else "notice", source=item["source"]), category),
+             item["id"].rsplit("-", 1)[-1], escape(item["title"]), SOURCE_LABELS[item["source"]], category, metadata,
              escape(item["summary"]), "".join(blocks), external(item["source_url"], "查看官方原文 ↗"),
              "".join(neighbors))
 
@@ -183,6 +187,15 @@ def about():
         '<p>公告来自《绝区零》官网及 Bilibili 官方账号的历史归档。每条记录均标明来源，具体内容与活动时限以原文为准。'
         '页面显示北京时间。部分条目仅提供简要导读和原文入口。</p><h2>官方渠道</h2><ul>{}</ul></article>'
     ).format("".join("<li>{}</li>".format(external(url, label)) for label, url in SOURCES))
+
+
+def settings_page():
+    links = [local("index.html", "综合推送", ' class="external"')]
+    links.extend(local(list_path("all", source=source), label, ' class="external"')
+                 for source, label in SOURCE_LABELS.items())
+    return (hero("设置", "SETTINGS", "切换公告推送的来源")
+            + '<section class="reader"><h2>信息源</h2><ul class="source-links">{}</ul></section>'.format(
+                "".join("<li>{}</li>".format(link) for link in links)))
 
 
 def page_html(title, body, selected, sync):
@@ -264,13 +277,25 @@ def render(out, store):
         for page in range(1, pages + 1):
             title, body = listing(scoped[(page - 1) * PAGE_SIZE:page * PAGE_SIZE], category, page, pages, remote)
             write_page(out, list_path(category, page), title, body, "index.html", sync)
-    for i, item in enumerate(chronological):
-        newer = chronological[i - 1] if i else None
-        older = chronological[i + 1] if i + 1 < len(chronological) else None
-        write_page(out, article_path(item), item["title"], detail(item, newer, older, remote), "index.html", sync)
+    for source in SOURCE_LABELS:
+        for category, _ in FEED_TABS:
+            scoped = [item for item in items if item["source"] == source and (
+                category == "all" or (item["category"] == "event") == (category == "event"))]
+            pages = max(1, (len(scoped) + PAGE_SIZE - 1) // PAGE_SIZE)
+            for page in range(1, pages + 1):
+                title, body = listing(scoped[(page - 1) * PAGE_SIZE:page * PAGE_SIZE],
+                                      category, page, pages, remote, source)
+                write_page(out, list_path(category, page, source), title, body, "index.html", sync)
+    write_page(out, "settings.html", "设置", settings_page(), "", sync)
+    for source in SOURCE_LABELS:
+        scoped = [item for item in chronological if item["source"] == source]
+        for i, item in enumerate(scoped):
+            newer = scoped[i - 1] if i else None
+            older = scoped[i + 1] if i + 1 < len(scoped) else None
+            write_page(out, article_path(item), item["title"], detail(item, newer, older, remote), "index.html", sync)
     for start in range(0, len(items), SEARCH_SIZE):
         rows = [[item["id"], item["title"], item["category"], item["summary"], clock(item["published_at"]),
-                 " ".join(block["text"] for block in item["content"])[:600]]
+                 " ".join(block["text"] for block in item["content"])[:600], SOURCE_LABELS[item["source"]]]
                 for item in items[start:start + SEARCH_SIZE]]
         (assets / "search-{}.json".format(start // SEARCH_SIZE)).write_bytes(encoded(rows))
     shards = (len(items) + SEARCH_SIZE - 1) // SEARCH_SIZE

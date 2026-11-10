@@ -10,7 +10,9 @@ UID = "1636034895"
 ORIGIN = "https://www.bilibili.com"
 OFFICIAL = "https://zenless.hoyoverse.com"
 OFFICIAL_CHANNEL = "288"
-SOURCE_LABELS = {"bilibili": "BILIBILI / 绝区零", "hoyoverse": "HOYOVERSE / 绝区零官网"}
+CN_CHANNEL = "273"
+CN = "https://zzz.mihoyo.com"
+SOURCE_LABELS = {"bilibili": "BiliBili", "mihoyo": "miHoYo-CN", "hoyoverse": "HoYoVerse-Global"}
 CST = timezone(timedelta(hours=8))
 CATEGORIES = {
     "version": ("版本更新", "UPDATE"),
@@ -21,8 +23,8 @@ CATEGORIES = {
     "other": ("其他官方资讯", "INTEL"),
 }
 BILI_ID = re.compile(r"[1-9][0-9]{14,21}")
-OFFICIAL_ID = re.compile(r"hoyo-[1-9][0-9]{3,11}")
-ID = re.compile(r"(?:[1-9][0-9]{14,21}|hoyo-[1-9][0-9]{3,11})")
+OFFICIAL_ID = re.compile(r"(?:hoyo|mihoyo)-[1-9][0-9]{3,11}")
+ID = re.compile(r"(?:[1-9][0-9]{14,21}|(?:hoyo|mihoyo)-[1-9][0-9]{3,11})")
 REMOTE_IMAGE = re.compile(r"https://i[0-3]\.hdslb\.com/bfs/[A-Za-z0-9_/-]{1,400}\.(?:jpg|jpeg|png)(?:@[0-9]{2,4}w\.(?:jpg|png))?")
 STAMP = re.compile(r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}[+-][0-9]{2}:[0-5][0-9]")
 DIGEST = re.compile(r"[0-9a-f]{64}")
@@ -73,7 +75,8 @@ def date(value):
 
 def canonical(identifier):
     if OFFICIAL_ID.fullmatch(identifier):
-        return OFFICIAL + "/zh-cn/news/" + identifier[5:]
+        prefix, number = identifier.split("-", 1)
+        return (CN + "/news/" if prefix == "mihoyo" else OFFICIAL + "/zh-cn/news/") + number
     require(BILI_ID.fullmatch(identifier), "invalid Bilibili ID")
     return ORIGIN + "/opus/" + identifier
 
@@ -100,7 +103,8 @@ def validate_record(item):
     require(isinstance(item, dict) and item.keys() == fields, "invalid record fields")
     identifier = item["id"]
     require(isinstance(identifier, str) and ID.fullmatch(identifier), "invalid source ID")
-    origin = ("hoyoverse", OFFICIAL_CHANNEL) if OFFICIAL_ID.fullmatch(identifier) else ("bilibili", UID)
+    origin = (("mihoyo", CN_CHANNEL) if identifier.startswith("mihoyo-") else
+              ("hoyoverse", OFFICIAL_CHANNEL) if identifier.startswith("hoyo-") else ("bilibili", UID))
     require((item["source"], item["source_uid"]) == origin, "invalid origin")
     require(item["source_url"] == canonical(identifier), "invalid source URL")
     require(valid_text(item["title"], 180) and valid_text(item["summary"], 240), "invalid title or summary")
