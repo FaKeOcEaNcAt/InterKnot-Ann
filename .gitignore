@@ -1,0 +1,8 @@
+__pycache__/
+_site/
+.qa/
+.env
+.env.*
+*.pem
+*.key
+resource/

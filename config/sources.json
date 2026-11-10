@@ -1,0 +1,6 @@
+{
+  "adapter": "hoyoverse-official",
+  "page_limit": 16,
+  "interval_seconds": 2,
+  "exclude_ids": []
+}

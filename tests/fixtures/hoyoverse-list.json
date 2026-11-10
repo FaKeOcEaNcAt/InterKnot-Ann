@@ -1,0 +1,16 @@
+{
+  "retcode": 0,
+  "data": {
+    "iTotal": 1584,
+    "list": [
+      {
+        "sChanId": ["296"],
+        "sTitle": "「『嗯呢』从天降」活动说明",
+        "sUrl": "",
+        "sContent": "<p>【活动时间】</p><p>2026/11/11 10:00 ~ 2026/12/01 03:59</p><script>ignored()</script>",
+        "dtStartTime": "2026-11-09 14:30:00",
+        "iInfoId": 167271
+      }
+    ]
+  }
+}
