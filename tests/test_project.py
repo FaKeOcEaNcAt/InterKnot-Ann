@@ -241,14 +241,16 @@ class OfficialTest(unittest.TestCase):
         _, _, cn = official.normalize(cn_row, set(), source="mihoyo")
         self.assertEqual(cn["source"], "mihoyo")
         self.assertEqual(cn["source_url"], "https://zzz.mihoyo.com/news/161243")
-        _, _, authorized = official.normalize(
+        _, _, article = official.normalize(
             dict(cn_row, sContent="<p>正文第一段</p><script>danger()</script><p>&lt;第二段&gt;</p>"),
-            set(), source="mihoyo", full_text={"mihoyo-161243"})
-        self.assertEqual(cn["content"], [])
-        self.assertEqual([block["text"] for block in authorized["content"]], ["正文第一段", "<第二段>"])
-        detail_page = build.detail(authorized, None, None, {})
+            set(), source="mihoyo")
+        self.assertTrue(cn["content"])
+        self.assertEqual([block["text"] for block in article["content"]], ["正文第一段", "<第二段>"])
+        detail_page = build.detail(article, None, None, {})
         self.assertIn("官方正文", detail_page)
         self.assertIn("&lt;第二段&gt;", detail_page)
+        self.assertIn("侵联删", detail_page)
+        self.assertIn(cn["source_url"], detail_page)
         self.assertNotIn("danger()", detail_page)
         with self.assertRaises(Invalid):
             official.normalize(dict(rows[0], sChanId=["wrong"]), set())

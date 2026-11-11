@@ -10,7 +10,14 @@ button, input, select { font: inherit; }
 button { cursor: pointer; }
 a:focus, button:focus, input:focus, select:focus { outline: 3px solid #60dcff; outline-offset: 3px; }
 .shell { width: 92%; max-width: 1680px; margin: 0 auto; }
-main { position: relative; z-index: 0; }
+main { position: relative; z-index: 0; animation: page-enter 180ms ease-out; }
+@keyframes page-enter {
+  from { opacity: .55; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  main { animation: none; }
+}
 main:before { position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; content: ""; background-image: linear-gradient(127deg, transparent 0, transparent 11%, #222226 11%, #222226 20%, transparent 20%, transparent 69%, #232326 69%, #232326 77%, transparent 77%), radial-gradient(circle at 78% 14%, #2a2a2d 0, #2a2a2d 6%, transparent 6%); opacity: .63; }
 .skip { position: absolute; left: -9999px; }
 .skip:focus { left: 1em; top: 1em; z-index: 3; padding: .6em; background: #131314; }
@@ -101,6 +108,8 @@ main:before { position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom
 .reader-meta { color: #c6c7c1; }
 .article-copy { border-top: 1px solid #535353; margin-top: 21px; padding-top: 4px; }
 .article-copy p { white-space: pre-line; }
+.article-attribution { margin-top: 25px; padding-top: 8px; border-top: 1px solid #535353; }
+.rights-notice { color: #ff9090; }
 .lead { font-size: 18px; }
 .breadcrumbs a, .pagination a, .neighbors a, .external { display: inline-block; padding: 9px 13px; min-height: 44px; border: 2px solid #4c4e50; border-radius: 22px; background: #101011; font-weight: bold; color: #fff; }
 .external { background: #c4db00; border-color: #c4db00; color: #121500; }

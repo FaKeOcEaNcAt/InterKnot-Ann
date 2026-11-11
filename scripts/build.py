@@ -12,6 +12,7 @@ PAGE_SIZE = 12
 SEARCH_SIZE = 100
 FEED_TABS = (("all", "全部"), ("notice", "公告"), ("event", "活动"))
 OUT = ROOT / "_site"
+RIGHTS_CONTACT = "https://github.com/FaKeOcEaNcAt/InterKnot-Ann/issues/new"
 SOURCES = (
     ("Bilibili · 绝区零", "https://space.bilibili.com/1636034895"),
     ("绝区零官网 · 米哈游", "https://zzz.mihoyo.com/news"),
@@ -151,17 +152,25 @@ def detail(item, newer, older, remote):
         neighbors.append(local(article_path(newer), "‹ 较新：" + newer["title"], ' rel="prev"'))
     if older:
         neighbors.append(local(article_path(older), "较早：" + older["title"] + " ›", ' rel="next"'))
+    source = SOURCE_LABELS[item["source"]]
+    attribution = (
+        '<section class="article-attribution" aria-label="转载说明">'
+        '<p>原文出处为 {}。{}</p>'
+        '<p>本站为非官方公告归档。转载内容的权利归原权利人所有，公告的最新内容以官方原文为准。</p>'
+        '<p class="rights-notice"><strong>如有侵权，请联系删除（侵联删）。</strong> {}</p></section>'
+    ).format(source, external(item["source_url"], "查看官方原文 ↗"),
+             external(RIGHTS_CONTACT, "联系站点维护者 ↗"))
     return (
         '<p class="breadcrumbs">{} <span aria-hidden="true">/</span> {}</p>'
         '<article class="reader"><p class="eyebrow"><i></i> OFFICIAL RELAY / {}</p><h1>{}</h1>'
         '<p class="reader-meta">{} · {} · {}</p>'
         '<section class="article-copy"><h2>公告摘要</h2><p class="lead">{}</p>{}{}</section>'
-        '<p>{}</p></article><nav class="neighbors" aria-label="相邻公告">{}</nav>'
+        '{}</article><nav class="neighbors" aria-label="相邻公告">{}</nav>'
     ).format(local(list_path("all", source=item["source"]), "‹ 返回该来源"), local(list_path("event" if item["category"] == "event" else "notice", source=item["source"]), category),
              item["id"].rsplit("-", 1)[-1], escape(item["title"]), SOURCE_LABELS[item["source"]], category, metadata,
              escape(item["summary"]),
              "<h2>官方正文</h2>" if item["source"] != "bilibili" and item["content"] else "",
-             "".join(blocks), external(item["source_url"], "查看官方原文 ↗"),
+             "".join(blocks), attribution,
              "".join(neighbors))
 
 

@@ -4,7 +4,7 @@ from datetime import datetime
 from html.parser import HTMLParser
 
 from scripts.bilibili import classify, clean, eligible, get_json
-from scripts.model import CN_CHANNEL, CST, OFFICIAL_CHANNEL, OFFICIAL_ID, ROOT, canonical, decode, digest, require, validate_record
+from scripts.model import CN_CHANNEL, CST, OFFICIAL_CHANNEL, OFFICIAL_ID, canonical, digest, require, validate_record
 
 HOST = "sg-public-api-static.hoyoverse.com"
 ENDPOINT = "/content_v2_user/app/3e9196a4b9274bd7/getContentList"
@@ -66,14 +66,7 @@ def parse_page(payload):
     return data["list"], data["iTotal"]
 
 
-def full_text_ids():
-    ids = decode((ROOT / "config" / "full-text-ids.json").read_bytes())
-    require(isinstance(ids, list) and all(isinstance(item, str) and OFFICIAL_ID.fullmatch(item)
-                                         for item in ids), "invalid full-text IDs")
-    return set(ids)
-
-
-def normalize(row, excluded, source="hoyoverse", full_text=()):
+def normalize(row, excluded, source="hoyoverse"):
     _, _, channel_id, prefix, news, notice, event = SITES[source]
     require(isinstance(row, dict) and type(row.get("iInfoId")) is int, "missing official ID")
     identifier = prefix + "-" + str(row["iInfoId"])
@@ -95,14 +88,6 @@ def normalize(row, excluded, source="hoyoverse", full_text=()):
     parser.feed(html)
     parser.close()
     plain = "".join(parser.parts).strip()
-    content = []
-    if identifier in full_text:
-        for line in plain.splitlines():
-            text = line.strip()
-            for start in range(0, len(text), 2000):
-                chunk = text[start:start + 2000].strip()
-                if chunk:
-                    content.append({"type": "paragraph", "text": chunk})
     category = classify(title, plain)
     if category == "other":
         if event in channels:
@@ -117,6 +102,13 @@ def normalize(row, excluded, source="hoyoverse", full_text=()):
             return identifier, published, None
     if not eligible(title, plain):
         return identifier, published, None
+    content = []
+    for line in plain.splitlines():
+        text = line.strip()
+        for start in range(0, len(text), 2000):
+            chunk = text[start:start + 2000].strip()
+            if chunk:
+                content.append({"type": "paragraph", "text": chunk})
     summary = SUMMARIES[category]
     window = ACTIVITY_TIME.search(plain) if category in ("event", "signal") else None
     if window:
@@ -138,7 +130,6 @@ def collect(page_limit, interval, excluded, cutoff, current, source="hoyoverse")
     items = {}
     first_ids = set()
     seen = set()
-    full_text = full_text_ids()
     for page in range(1, page_limit + 1):
         if page > 1:
             time.sleep(interval)
@@ -149,7 +140,7 @@ def collect(page_limit, interval, excluded, cutoff, current, source="hoyoverse")
         page_ids = set()
         dates = []
         for entry in entries:
-            identifier, published, item = normalize(entry, excluded, source, full_text)
+            identifier, published, item = normalize(entry, excluded, source)
             require(identifier not in page_ids, "duplicate ID in official page")
             page_ids.add(identifier)
             dates.append(published)

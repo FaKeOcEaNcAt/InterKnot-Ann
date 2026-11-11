@@ -2,7 +2,7 @@ from html.parser import HTMLParser
 from pathlib import PurePosixPath
 from urllib.parse import urlsplit
 
-from scripts.build import OUT, SOURCES
+from scripts.build import OUT, RIGHTS_CONTACT, SOURCES
 from scripts.model import BILI_ID, OFFICIAL_ID, ORIGIN, REMOTE_IMAGE, canonical, decode, require
 
 PUBLIC_ASSET = {"site.css", "app.js"}
@@ -37,6 +37,7 @@ class Page(HTMLParser):
                     canonical("hoyo-" + number), canonical("mihoyo-" + number)
                 )
                 require(tag == "a" and (href in {url for _, url in SOURCES}
+                        or href == RIGHTS_CONTACT
                         or ((bili or official)
                             and not parts.query and not parts.fragment)),
                         "unsafe external URL")
