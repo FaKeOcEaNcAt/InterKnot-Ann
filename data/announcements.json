@@ -1,7 +1,39 @@
 {
   "schema": 1,
-  "last_changed_sync": "2026-11-10T15:17:29+08:00",
+  "last_changed_sync": "2026-11-11T16:23:32+08:00",
   "items": [
+    {
+      "id": "mihoyo-167308",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "重返天空的旅程丨3.3版本内容一览（下期）",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-11-11T12:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/167308",
+      "is_pinned": false,
+      "content_hash": "0ac3d591e5b9f8847b2d2700b135d2ffe0adee13b1de417b42dcf6173e505509",
+      "ingest": "feed"
+    },
+    {
+      "id": "hoyo-167304",
+      "source": "hoyoverse",
+      "source_uid": "288",
+      "title": "重返天空的旅程丨3.3版本内容一览（下期）",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [],
+      "images": [],
+      "published_at": "2026-11-11T12:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zenless.hoyoverse.com/zh-cn/news/167304",
+      "is_pinned": false,
+      "content_hash": "adebb7c51aa8a6f26a27a86cfdf26f63fd4cee699ca52d852f43e69583680636",
+      "ingest": "feed"
+    },
     {
       "id": "mihoyo-167302",
       "source": "mihoyo",
