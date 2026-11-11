@@ -5,7 +5,7 @@ const acorn = require("internal/deps/acorn/acorn/dist/acorn");
 
 const source = fs.readFileSync("static/app.js", "utf8");
 acorn.parse(source, { ecmaVersion: 5 });
-assert.doesNotMatch(source, /\b(?:eval|fetch|Promise|Map|Set|innerHTML|outerHTML|localStorage|querySelector)\b/);
+assert.doesNotMatch(source, /\b(?:eval|fetch|Promise|Map|Set|innerHTML|outerHTML|querySelector)\b/);
 
 function element() {
     return {
@@ -19,12 +19,14 @@ function element() {
     };
 }
 
-function runtime(fullscreen) {
+function runtime(fullscreen, storage = {}, reduced = false, userAgent = "Windows Phone 8.1") {
     const ids = {};
-    for (const id of ["screen", "screen-status", "search", "search-status", "results", "query", "category"]) {
+    for (const id of ["screen", "screen-status", "search", "search-status", "results", "query", "category",
+        "background-motion", "motion-setting"]) {
         ids[id] = element();
     }
     const root = element();
+    root.className = "";
     const document = {
         ...element(), documentElement: root,
         getElementById(id) { return ids[id]; },
@@ -48,7 +50,12 @@ function runtime(fullscreen) {
             this.onload();
         };
     }
-    vm.runInNewContext(source, { document, XMLHttpRequest, navigator: { userAgent: "Windows Phone 8.1" } });
+    const window = {
+        matchMedia() { return { matches: reduced }; },
+        localStorage: { getItem(key) { return storage[key]; }, setItem(key, value) { storage[key] = value; } },
+    };
+    vm.runInNewContext(source, { document, XMLHttpRequest, window,
+        navigator: { userAgent } });
     return { ids, document, requested };
 }
 
@@ -71,4 +78,13 @@ const unsupported = runtime(false).ids;
 assert.equal(unsupported.screen.revealed, true);
 unsupported.screen.events.click();
 assert.match(unsupported["screen-status"].textContent, /无法进入全屏/);
+const motionPreference = {};
+const motion = runtime(true, motionPreference);
+assert.equal(motion.ids["background-motion"].checked, false);
+motion.ids["background-motion"].checked = true;
+motion.ids["background-motion"].events.change();
+assert.match(motion.document.documentElement.className, /motion-background/);
+assert.equal(runtime(true, motionPreference).ids["background-motion"].checked, true);
+assert.equal(runtime(false, {}, true, "Desktop").ids["background-motion"].checked, false);
+assert.equal(runtime(false, {}, false, "Desktop").ids["background-motion"].checked, true);
 console.log("ES5 syntax, search, safe DOM output and fullscreen behavior passed");

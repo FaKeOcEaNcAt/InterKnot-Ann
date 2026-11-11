@@ -155,11 +155,13 @@ def detail(item, newer, older, remote):
         '<p class="breadcrumbs">{} <span aria-hidden="true">/</span> {}</p>'
         '<article class="reader"><p class="eyebrow"><i></i> OFFICIAL RELAY / {}</p><h1>{}</h1>'
         '<p class="reader-meta">{} · {} · {}</p>'
-        '<section class="article-copy"><h2>公告摘要</h2><p class="lead">{}</p>{}</section>'
+        '<section class="article-copy"><h2>公告摘要</h2><p class="lead">{}</p>{}{}</section>'
         '<p>{}</p></article><nav class="neighbors" aria-label="相邻公告">{}</nav>'
     ).format(local(list_path("all", source=item["source"]), "‹ 返回该来源"), local(list_path("event" if item["category"] == "event" else "notice", source=item["source"]), category),
              item["id"].rsplit("-", 1)[-1], escape(item["title"]), SOURCE_LABELS[item["source"]], category, metadata,
-             escape(item["summary"]), "".join(blocks), external(item["source_url"], "查看官方原文 ↗"),
+             escape(item["summary"]),
+             "<h2>官方正文</h2>" if item["source"] != "bilibili" and item["content"] else "",
+             "".join(blocks), external(item["source_url"], "查看官方原文 ↗"),
              "".join(neighbors))
 
 
@@ -193,9 +195,13 @@ def settings_page():
     links = [local("index.html", "综合推送", ' class="external"')]
     links.extend(local(list_path("all", source=source), label, ' class="external"')
                  for source, label in SOURCE_LABELS.items())
-    return (hero("设置", "SETTINGS", "切换公告推送的来源")
+    return (hero("设置", "SETTINGS", "信息源与显示偏好")
             + '<section class="reader"><h2>信息源</h2><ul class="source-links">{}</ul></section>'.format(
-                "".join("<li>{}</li>".format(link) for link in links)))
+                "".join("<li>{}</li>".format(link) for link in links))
+            + '<section class="reader"><h2>显示</h2>'
+            '<label class="motion-setting" id="motion-setting" hidden>'
+            '<input type="checkbox" id="background-motion"> 动态背景</label>'
+            '<noscript><p>启用 JavaScript 后可切换动态背景。</p></noscript></section>')
 
 
 def page_html(title, body, selected, sync):

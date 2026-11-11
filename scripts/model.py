@@ -116,7 +116,7 @@ def validate_record(item):
     if item["updated_at"] is not None:
         require(date(item["updated_at"]) >= published, "update precedes publication")
     content = item["content"]
-    require(isinstance(content, list) and len(content) <= 30, "invalid content blocks")
+    require(isinstance(content, list) and len(content) <= 500, "invalid content blocks")
     for block in content:
         require(isinstance(block, dict) and block.keys() == {"type", "text"}
                 and block["type"] in ("paragraph", "heading")

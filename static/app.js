@@ -10,6 +10,40 @@
         root.className += " windows-phone";
     }
 
+    var motionKey = "interknot-background-motion";
+    var motionToggle = document.getElementById("background-motion");
+    var motionEnabled = !windowsPhone &&
+        !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    try {
+        var savedMotion = window.localStorage.getItem(motionKey);
+        if (savedMotion === "on" || savedMotion === "off") {
+            motionEnabled = savedMotion === "on";
+        }
+    } catch (error) {
+        // The current page can still use the switch when browser storage is unavailable.
+    }
+
+    function applyMotion(enabled) {
+        root.className = root.className.replace(/(?:^|\s)motion-background(?=\s|$)/g, "");
+        if (enabled) {
+            root.className += " motion-background";
+        }
+    }
+
+    applyMotion(motionEnabled);
+    if (motionToggle) {
+        motionToggle.checked = motionEnabled;
+        document.getElementById("motion-setting").removeAttribute("hidden");
+        motionToggle.addEventListener("change", function () {
+            applyMotion(motionToggle.checked);
+            try {
+                window.localStorage.setItem(motionKey, motionToggle.checked ? "on" : "off");
+            } catch (error) {
+                // Keep the current setting until navigation.
+            }
+        });
+    }
+
     function isFullscreen() {
         return document.fullscreenElement || document.msFullscreenElement || document.webkitFullscreenElement;
     }

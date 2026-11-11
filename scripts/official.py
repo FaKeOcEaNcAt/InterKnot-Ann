@@ -4,7 +4,7 @@ from datetime import datetime
 from html.parser import HTMLParser
 
 from scripts.bilibili import classify, clean, eligible, get_json
-from scripts.model import CN_CHANNEL, CST, OFFICIAL_CHANNEL, OFFICIAL_ID, canonical, digest, require, validate_record
+from scripts.model import CN_CHANNEL, CST, OFFICIAL_CHANNEL, OFFICIAL_ID, ROOT, canonical, decode, digest, require, validate_record
 
 HOST = "sg-public-api-static.hoyoverse.com"
 ENDPOINT = "/content_v2_user/app/3e9196a4b9274bd7/getContentList"
@@ -34,17 +34,21 @@ class ArticleText(HTMLParser):
     def __init__(self):
         super().__init__()
         self.parts = []
-        self.ignored = None
+        self.ignored = []
 
     def handle_starttag(self, tag, attrs):
-        if tag in ("script", "style") and not self.ignored:
-            self.ignored = tag
-        if tag in ("p", "br", "li", "div") and not self.ignored:
+        if tag in ("script", "style", "template", "iframe"):
+            self.ignored.append(tag)
+        if tag in ("p", "br", "li", "div", "h1", "h2", "h3", "h4", "h5", "h6", "tr") and not self.ignored:
             self.parts.append("\n")
 
     def handle_endtag(self, tag):
-        if tag == self.ignored:
-            self.ignored = None
+        if self.ignored and tag == self.ignored[-1]:
+            self.ignored.pop()
+        if tag in ("td", "th") and not self.ignored:
+            self.parts.append(" ")
+        if tag in ("p", "li", "tr") and not self.ignored:
+            self.parts.append("\n")
 
     def handle_data(self, data):
         if not self.ignored:
@@ -62,7 +66,14 @@ def parse_page(payload):
     return data["list"], data["iTotal"]
 
 
-def normalize(row, excluded, source="hoyoverse"):
+def full_text_ids():
+    ids = decode((ROOT / "config" / "full-text-ids.json").read_bytes())
+    require(isinstance(ids, list) and all(isinstance(item, str) and OFFICIAL_ID.fullmatch(item)
+                                         for item in ids), "invalid full-text IDs")
+    return set(ids)
+
+
+def normalize(row, excluded, source="hoyoverse", full_text=()):
     _, _, channel_id, prefix, news, notice, event = SITES[source]
     require(isinstance(row, dict) and type(row.get("iInfoId")) is int, "missing official ID")
     identifier = prefix + "-" + str(row["iInfoId"])
@@ -84,6 +95,14 @@ def normalize(row, excluded, source="hoyoverse"):
     parser.feed(html)
     parser.close()
     plain = "".join(parser.parts).strip()
+    content = []
+    if identifier in full_text:
+        for line in plain.splitlines():
+            text = line.strip()
+            for start in range(0, len(text), 2000):
+                chunk = text[start:start + 2000].strip()
+                if chunk:
+                    content.append({"type": "paragraph", "text": chunk})
     category = classify(title, plain)
     if category == "other":
         if event in channels:
@@ -106,7 +125,7 @@ def normalize(row, excluded, source="hoyoverse"):
     item = {
         "id": identifier, "source": source, "source_uid": channel_id,
         "title": " ".join(title.split())[:180], "category": category, "summary": summary,
-        "content": [], "images": [], "published_at": published.isoformat(timespec="seconds"),
+        "content": content, "images": [], "published_at": published.isoformat(timespec="seconds"),
         "updated_at": None, "source_url": canonical(identifier), "is_pinned": False,
         "content_hash": digest([title, html]), "ingest": "feed",
     }
@@ -119,6 +138,7 @@ def collect(page_limit, interval, excluded, cutoff, current, source="hoyoverse")
     items = {}
     first_ids = set()
     seen = set()
+    full_text = full_text_ids()
     for page in range(1, page_limit + 1):
         if page > 1:
             time.sleep(interval)
@@ -129,7 +149,7 @@ def collect(page_limit, interval, excluded, cutoff, current, source="hoyoverse")
         page_ids = set()
         dates = []
         for entry in entries:
-            identifier, published, item = normalize(entry, excluded, source)
+            identifier, published, item = normalize(entry, excluded, source, full_text)
             require(identifier not in page_ids, "duplicate ID in official page")
             page_ids.add(identifier)
             dates.append(published)
