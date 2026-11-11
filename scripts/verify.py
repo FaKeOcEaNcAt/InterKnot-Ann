@@ -43,7 +43,7 @@ class Page(HTMLParser):
                         "unsafe external URL")
                 require("noopener" in values.get("rel", "").split(), "unsafe external link relationship")
             else:
-                path = PurePosixPath(href)
+                path = PurePosixPath("index.html" if tag == "a" and href == "index.html?source=all" else href)
                 require(href and not path.is_absolute() and ".." not in path.parts
                         and (self.root / path).is_file(), "missing or unsafe local URL")
 

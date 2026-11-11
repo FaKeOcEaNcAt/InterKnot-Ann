@@ -19,10 +19,10 @@ function element() {
     };
 }
 
-function runtime(fullscreen, storage = {}, reduced = false, userAgent = "Windows Phone 8.1") {
+function runtime(fullscreen, storage = {}, reduced = false, userAgent = "Windows Phone 8.1", regional = {}) {
     const ids = {};
     for (const id of ["screen", "screen-status", "search", "search-status", "results", "query", "category",
-        "background-motion", "motion-setting"]) {
+        "background-motion", "motion-setting", "source-settings"]) {
         ids[id] = element();
     }
     const root = element();
@@ -54,9 +54,20 @@ function runtime(fullscreen, storage = {}, reduced = false, userAgent = "Windows
         matchMedia() { return { matches: reduced }; },
         localStorage: { getItem(key) { return storage[key]; }, setItem(key, value) { storage[key] = value; } },
     };
+    const redirects = [];
+    if (regional.path) {
+        window.location = {
+            pathname: regional.path, search: regional.query || "", hash: "",
+            replace(url) { redirects.push(url); },
+        };
+    }
+    if (regional.zone) {
+        window.Intl = { DateTimeFormat() { return { resolvedOptions() { return { timeZone: regional.zone }; } }; } };
+    }
+    function DeviceDate() { this.getTimezoneOffset = () => regional.offset; }
     vm.runInNewContext(source, { document, XMLHttpRequest, window,
-        navigator: { userAgent } });
-    return { ids, document, requested };
+        Date: DeviceDate, navigator: { userAgent, ...regional.languages } });
+    return { ids, document, requested, redirects };
 }
 
 const { ids, document, requested } = runtime(true);
@@ -87,4 +98,23 @@ assert.match(motion.document.documentElement.className, /motion-background/);
 assert.equal(runtime(true, motionPreference).ids["background-motion"].checked, true);
 assert.equal(runtime(false, {}, true, "Desktop").ids["background-motion"].checked, false);
 assert.equal(runtime(false, {}, false, "Desktop").ids["background-motion"].checked, true);
+const home = { path: "/InterKnot-Ann/" };
+function feed(regional, storage = {}) {
+    return runtime(false, storage, false, "Windows Phone 8.1", { ...home, ...regional }).redirects;
+}
+assert.deepEqual(feed({ languages: { language: "zh-Hans-CN" }, zone: "America/Vancouver" }), ["index-mihoyo.html"]);
+assert.deepEqual(feed({ languages: { languages: ["zh-HK", "zh-CN"] }, zone: "Asia/Shanghai" }), ["index-hoyoverse.html"]);
+assert.deepEqual(feed({ languages: { language: "zh-TW" }, offset: -480 }), ["index-hoyoverse.html"]);
+assert.deepEqual(feed({ languages: { systemLanguage: "zh" }, offset: -480 }), ["index-mihoyo.html"]);
+assert.deepEqual(feed({ languages: { language: "zh" }, zone: "Asia/Singapore" }), ["index-hoyoverse.html"]);
+assert.deepEqual(feed({ zone: "Asia/Shanghai" }), ["index-mihoyo.html"]);
+assert.deepEqual(feed({}), ["index-hoyoverse.html"]);
+assert.deepEqual(feed({ query: "?source=all" }), []);
+assert.deepEqual(feed({ path: "/InterKnot-Ann/index-mihoyo.html" }), []);
+const feedPreference = {};
+const settings = runtime(false, feedPreference, false, "Desktop").ids["source-settings"];
+settings.events.click({ target: { getAttribute() { return "bilibili"; } } });
+assert.deepEqual(feed({ zone: "Asia/Shanghai" }, feedPreference), ["index-bilibili.html"]);
+settings.events.click({ target: { getAttribute() { return "auto"; } } });
+assert.deepEqual(feed({ zone: "Asia/Shanghai" }, feedPreference), ["index-mihoyo.html"]);
 console.log("ES5 syntax, search, safe DOM output and fullscreen behavior passed");

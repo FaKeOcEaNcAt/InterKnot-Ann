@@ -60,7 +60,8 @@ def tabs(selected, source=None):
     if selected in CATEGORIES and selected != "event":
         selected = "notice"
     return '<nav class="filters" aria-label="公告分类">{}</nav>'.format("".join(
-        local(list_path(key, source=source), label, ' aria-current="page"' if selected == key else "")
+        local("index.html?source=all" if key == "all" and source is None else list_path(key, source=source),
+              label, ' aria-current="page"' if selected == key else "")
         for key, label in FEED_TABS
     ))
 
@@ -201,11 +202,14 @@ def about():
 
 
 def settings_page():
-    links = [local("index.html", "综合推送", ' class="external"')]
-    links.extend(local(list_path("all", source=source), label, ' class="external"')
+    links = [
+        local("index.html", "自动选择", ' class="external" data-source="auto"'),
+        local("index.html?source=all", "综合推送", ' class="external" data-source="all"'),
+    ]
+    links.extend(local(list_path("all", source=source), label, ' class="external" data-source="{}"'.format(source))
                  for source, label in SOURCE_LABELS.items())
     return (hero("设置", "SETTINGS", "信息源与显示偏好")
-            + '<section class="reader"><h2>信息源</h2><ul class="source-links">{}</ul></section>'.format(
+            + '<section class="reader"><h2>信息源</h2><ul class="source-links" id="source-settings">{}</ul></section>'.format(
                 "".join("<li>{}</li>".format(link) for link in links))
             + '<section class="reader"><h2>显示</h2>'
             '<label class="motion-setting" id="motion-setting" hidden>'

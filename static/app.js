@@ -1,6 +1,72 @@
 (function () {
     "use strict";
     var root = document.documentElement;
+    var sourceKey = "interknot-feed-source";
+    var sourcePages = {
+        mihoyo: "index-mihoyo.html",
+        hoyoverse: "index-hoyoverse.html",
+        bilibili: "index-bilibili.html"
+    };
+
+    function regionalSource() {
+        var locale = ((navigator.languages && navigator.languages[0]) || navigator.language ||
+            navigator.userLanguage || navigator.browserLanguage || navigator.systemLanguage || "")
+            .toLowerCase().replace(/_/g, "-");
+        var region = /^[a-z]{2,3}(?:-[a-z]{4})?-([a-z]{2}|\d{3})(?:-|$)/.exec(locale);
+        if (region) {
+            return region[1] === "cn" ? "mihoyo" : "hoyoverse";
+        }
+        if (/^(?:zh-hant|zh-cht)(?:-|$)/.test(locale)) {
+            return "hoyoverse";
+        }
+
+        var zone = "";
+        try {
+            zone = window.Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+        } catch (error) {
+            // Older IE can still report a UTC offset.
+        }
+        if (/^Asia\/(?:Shanghai|Chongqing|Chungking|Harbin|Urumqi|Kashgar)$/.test(zone) ||
+                zone === "PRC" || zone === "China Standard Time") {
+            return "mihoyo";
+        }
+        if (!zone && /^zh(?:-hans|-chs)?$/.test(locale) && new Date().getTimezoneOffset() === -480) {
+            return "mihoyo";
+        }
+        return "hoyoverse";
+    }
+
+    var location = window.location;
+    if (location && /\/(?:index\.html)?$/.test(location.pathname) &&
+            !/(?:^\?|&)source=all(?:&|$)/.test(location.search)) {
+        var preferredSource;
+        try {
+            preferredSource = window.localStorage.getItem(sourceKey);
+        } catch (error) {
+            // Use regional detection if browser storage is unavailable.
+        }
+        if (preferredSource !== "all") {
+            var destination = Object.prototype.hasOwnProperty.call(sourcePages, preferredSource) ?
+                sourcePages[preferredSource] : sourcePages[regionalSource()];
+            location.replace(destination + location.search + location.hash);
+            return;
+        }
+    }
+
+    var sourceSettings = document.getElementById("source-settings");
+    if (sourceSettings) {
+        sourceSettings.addEventListener("click", function (event) {
+            var selected = event.target.getAttribute("data-source");
+            if (selected) {
+                try {
+                    window.localStorage.setItem(sourceKey, selected);
+                } catch (error) {
+                    // The link still opens the selected feed.
+                }
+            }
+        });
+    }
+
     var screen = document.getElementById("screen");
     var screenStatus = document.getElementById("screen-status");
     var request = root.requestFullscreen || root.msRequestFullscreen || root.webkitRequestFullscreen;
