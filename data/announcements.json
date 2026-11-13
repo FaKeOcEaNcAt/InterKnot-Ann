@@ -1,7 +1,109 @@
 {
   "schema": 1,
-  "last_changed_sync": "2026-11-12T01:09:58+08:00",
+  "last_changed_sync": "2026-11-13T16:46:05+08:00",
   "items": [
+    {
+      "id": "mihoyo-167335",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "「修复吧！漂流画集」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/11/16 10:00 至 2026/11/30 03:59（服务器时间）。",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "【活动时间】"
+        },
+        {
+          "type": "paragraph",
+          "text": "2026/11/16 10:00 ~ 2026/11/30 03:59"
+        },
+        {
+          "type": "paragraph",
+          "text": "【参与条件】"
+        },
+        {
+          "type": "paragraph",
+          "text": "绳网等级≥20级，完成主线第一章·幕间后即可参与。"
+        },
+        {
+          "type": "paragraph",
+          "text": "【活动说明】"
+        },
+        {
+          "type": "paragraph",
+          "text": "• 活动期间，绳匠可以前往布亚斯特，和漂流画集发起布对话，修复漂流画集，完成拼图游戏。"
+        },
+        {
+          "type": "paragraph",
+          "text": "• 活动拼图总计5册，每册拼图将在指定时间点依次解锁。"
+        },
+        {
+          "type": "paragraph",
+          "text": "• 完成活动拼图，即可获得[菲林]、[邦布券]和各类养成材料奖励。"
+        },
+        {
+          "type": "paragraph",
+          "text": "—— 欢迎来到罗斯凯利法！——"
+        }
+      ],
+      "images": [],
+      "published_at": "2026-11-13T12:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/167335",
+      "is_pinned": false,
+      "content_hash": "583d92b0caf0ec104eb0c3158e2135912983caf5fcf62783d25de4f7950bc424",
+      "ingest": "feed"
+    },
+    {
+      "id": "hoyo-167283",
+      "source": "hoyoverse",
+      "source_uid": "288",
+      "title": "「修复吧！漂流画集」活动说明",
+      "category": "event",
+      "summary": "活动时段：2026/11/16 10:00 至 2026/11/30 03:59（服务器时间）。",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "【活动时间】"
+        },
+        {
+          "type": "paragraph",
+          "text": "2026/11/16 10:00（服务器时间） ~ 2026/11/30 03:59（服务器时间）"
+        },
+        {
+          "type": "paragraph",
+          "text": "【参与条件】"
+        },
+        {
+          "type": "paragraph",
+          "text": "绳网等级≥20级，完成主线第一章·幕间后即可参与。"
+        },
+        {
+          "type": "paragraph",
+          "text": "【活动说明】"
+        },
+        {
+          "type": "paragraph",
+          "text": "• 活动期间，绳匠可以前往布亚斯特，和漂流画集发起布对话，修复漂流画集，完成拼图游戏。"
+        },
+        {
+          "type": "paragraph",
+          "text": "• 活动拼图总计5册，每册拼图将在指定时间点依次解锁。"
+        },
+        {
+          "type": "paragraph",
+          "text": "• 完成活动拼图，即可获得[菲林]、[邦布券]和各类养成材料奖励。"
+        }
+      ],
+      "images": [],
+      "published_at": "2026-11-13T12:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zenless.hoyoverse.com/zh-cn/news/167283",
+      "is_pinned": false,
+      "content_hash": "675e6f63db4f81c3e30134dda2b8227ce60df8f803cbde51f80c156899eff538",
+      "ingest": "feed"
+    },
     {
       "id": "mihoyo-167308",
       "source": "mihoyo",
