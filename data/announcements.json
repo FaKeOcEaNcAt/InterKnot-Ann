@@ -1,7 +1,68 @@
 {
   "schema": 1,
-  "last_changed_sync": "2026-11-13T16:46:05+08:00",
+  "last_changed_sync": "2026-11-16T14:21:20+08:00",
   "items": [
+    {
+      "id": "hoyo-167352",
+      "source": "hoyoverse",
+      "source_uid": "288",
+      "title": "《绝区零》3.4版本「长日终尽」前瞻特别节目预告",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "亲爱的绳匠"
+        },
+        {
+          "type": "paragraph",
+          "text": "《绝区零》3.4 版本「长日终尽」前瞻特别节目，将于 11月20日 18:30 (UTC+8) 正式开启！"
+        },
+        {
+          "type": "paragraph",
+          "text": "天之算枢的灯火在巢主空洞阴影中摇曳，天空之城陷入自建城以来的最大危局。"
+        },
+        {
+          "type": "paragraph",
+          "text": "三位「挽昼」能否在多方角力中破局，为罗斯凯利法带回明天的太阳？"
+        },
+        {
+          "type": "paragraph",
+          "text": "此外，来自天空之外的客人，还将带来一场意料之外的相遇……"
+        },
+        {
+          "type": "paragraph",
+          "text": "本期节目除了带来「挽昼」、「卡芙卡」、「知更鸟」的最新情报披露外，"
+        },
+        {
+          "type": "paragraph",
+          "text": "还将在播出期间还将发放限定兑换码福利，绳匠们记得准时收看，精彩不容错过！"
+        },
+        {
+          "type": "paragraph",
+          "text": "预先关注绝区零官方直播频道："
+        },
+        {
+          "type": "paragraph",
+          "text": "YouTube>> https://www.youtube.com/@ZZZ_Official/"
+        },
+        {
+          "type": "paragraph",
+          "text": "Twitch>> https://www.twitch.tv/zenlesszonezero"
+        },
+        {
+          "type": "paragraph",
+          "text": "TikTok>> https://www.tiktok.com/@zenlesszonezero"
+        }
+      ],
+      "images": [],
+      "published_at": "2026-11-16T12:00:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zenless.hoyoverse.com/zh-cn/news/167352",
+      "is_pinned": false,
+      "content_hash": "0fc9f4480a040bd397cd4f2c8cc908442b785f460e739424201528cd04b5db07",
+      "ingest": "feed"
+    },
     {
       "id": "mihoyo-167335",
       "source": "mihoyo",
