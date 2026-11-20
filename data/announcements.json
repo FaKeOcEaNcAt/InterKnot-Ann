@@ -1,7 +1,197 @@
 {
   "schema": 1,
-  "last_changed_sync": "2026-11-18T16:30:37+08:00",
+  "last_changed_sync": "2026-11-20T19:29:20+08:00",
   "items": [
+    {
+      "id": "mihoyo-167393",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "🎁决战于黎明之前",
+      "category": "event",
+      "summary": "官网发布了活动及参与安排。具体时间、条件和奖励请查看官方原文。",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "亲爱的绳匠，《绝区零》3.4版本「决战于黎明之前」预约&回归活动现已开启。"
+        },
+        {
+          "type": "paragraph",
+          "text": "立即参与>> 🎁决战于黎明之前"
+        },
+        {
+          "type": "paragraph",
+          "text": "网页内，参与预约活动可得160菲林和游戏内纪念名片！邀请好友回归或注册游戏，最高可得340菲林！"
+        },
+        {
+          "type": "paragraph",
+          "text": "游戏内签到活动「决战于黎明之前」期间，累计登录7日即可获赠480菲林！"
+        },
+        {
+          "type": "paragraph",
+          "text": "参与网页内抽奖活动，赢取iPhone、游戏主机、手办等奖励~"
+        },
+        {
+          "type": "paragraph",
+          "text": "【抽奖好礼】"
+        },
+        {
+          "type": "paragraph",
+          "text": "iPhone 18 Pro Max (1T) x1"
+        },
+        {
+          "type": "paragraph",
+          "text": "PlayStation®5（国行数字版） x8"
+        },
+        {
+          "type": "paragraph",
+          "text": "艾莲·乔 1/7手办 x10"
+        },
+        {
+          "type": "paragraph",
+          "text": "邦布蔬果国度 迷你盲盒（随机款）x200"
+        },
+        {
+          "type": "paragraph",
+          "text": "酷酷邦布手办盲盒 第一弹（随机款）x200"
+        },
+        {
+          "type": "paragraph",
+          "text": "【活动时间】"
+        },
+        {
+          "type": "paragraph",
+          "text": "2026/11/20- 2027/01/13 05:59"
+        },
+        {
+          "type": "paragraph",
+          "text": "※「决战于黎明之前」预约活动将于2026/12/02 05:59结束"
+        },
+        {
+          "type": "paragraph",
+          "text": "【活动说明】"
+        },
+        {
+          "type": "paragraph",
+          "text": "1. 绳匠完成版本预约和梦现追影玩法，并在3.4版本更新后登录游戏，可通过邮件领取预约奖励和纪念名片。"
+        },
+        {
+          "type": "paragraph",
+          "text": "2. 网页「决战于黎明之前」预约及梦现追影玩法将于2026/12/02 05:59结束，请绳匠及时预约并参与活动。"
+        },
+        {
+          "type": "paragraph",
+          "text": "3. 预约活动结束后，绳匠仍可通过网页链接进入回归活动「回归丽都 梦现新生」，邀请好友回归或注册游戏，参与抽奖。"
+        },
+        {
+          "type": "paragraph",
+          "text": "※更多内容及详细规则请前往活动页面查看。"
+        },
+        {
+          "type": "paragraph",
+          "text": "—— 欢迎来到罗斯凯利法！——"
+        }
+      ],
+      "images": [],
+      "published_at": "2026-11-20T19:24:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/167393",
+      "is_pinned": false,
+      "content_hash": "62e8762c235bf1bfef59c51040137e3977c0cadc715e524225d39585b884b486",
+      "ingest": "feed"
+    },
+    {
+      "id": "hoyo-167395",
+      "source": "hoyoverse",
+      "source_uid": "288",
+      "title": "【有奖活动】决战于黎明之前",
+      "category": "event",
+      "summary": "官网发布了活动及参与安排。具体时间、条件和奖励请查看官方原文。",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "亲爱的绳匠，《绝区零》3.4版本「决战于黎明之前」预约&回归活动现已开启。"
+        },
+        {
+          "type": "paragraph",
+          "text": "立即参与>>"
+        },
+        {
+          "type": "paragraph",
+          "text": "网页内，参与预约活动可得160菲林和游戏内纪念名片！邀请好友回归或注册游戏，最高可得340菲林！"
+        },
+        {
+          "type": "paragraph",
+          "text": "游戏内签到活动「决战于黎明之前」期间，累计登录7日即可获赠480菲林！"
+        },
+        {
+          "type": "paragraph",
+          "text": "参与网页内抽奖活动，赢取iPhone、游戏主机、手办等奖励~"
+        },
+        {
+          "type": "paragraph",
+          "text": "【抽奖好礼】"
+        },
+        {
+          "type": "paragraph",
+          "text": "iPhone 18 Pro Max (1T) x1"
+        },
+        {
+          "type": "paragraph",
+          "text": "PlayStation®5 Pro x8"
+        },
+        {
+          "type": "paragraph",
+          "text": "耀嘉音 1/7手办 x10"
+        },
+        {
+          "type": "paragraph",
+          "text": "邦布蔬果国度 迷你盲盒（随机款）x200"
+        },
+        {
+          "type": "paragraph",
+          "text": "酷酷邦布手办盲盒 第二弹（随机款）x200"
+        },
+        {
+          "type": "paragraph",
+          "text": "【活动时间】"
+        },
+        {
+          "type": "paragraph",
+          "text": "2026/11/20- 2027/01/13 05:59（UTC+8）"
+        },
+        {
+          "type": "paragraph",
+          "text": "※「决战于黎明之前」预约活动将于2026/12/02 05:59（UTC+8）结束"
+        },
+        {
+          "type": "paragraph",
+          "text": "【活动说明】"
+        },
+        {
+          "type": "paragraph",
+          "text": "1. 绳匠完成版本预约和梦现追影玩法，并在3.4版本更新后登录游戏，可通过邮件领取预约奖励和纪念名片。"
+        },
+        {
+          "type": "paragraph",
+          "text": "2. 网页「决战于黎明之前」预约及梦现追影玩法将于2026/12/02 05:59（UTC+8）结束，请绳匠及时预约并参与活动。"
+        },
+        {
+          "type": "paragraph",
+          "text": "3. 预约活动结束后，绳匠仍可通过网页链接进入回归活动「回归丽都 梦现新生」，邀请好友回归或注册游戏，参与抽奖。"
+        },
+        {
+          "type": "paragraph",
+          "text": "※更多内容及详细规则请前往活动页面查看。"
+        }
+      ],
+      "images": [],
+      "published_at": "2026-11-20T19:24:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zenless.hoyoverse.com/zh-cn/news/167395",
+      "is_pinned": false,
+      "content_hash": "19003997a22433f2869d1517e8441eaae502b7717146f068e5b09eff3fe4e067",
+      "ingest": "feed"
+    },
     {
       "id": "mihoyo-167373",
       "source": "mihoyo",
