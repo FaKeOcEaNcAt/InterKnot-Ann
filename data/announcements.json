@@ -1,7 +1,85 @@
 {
   "schema": 1,
-  "last_changed_sync": "2026-11-20T19:29:20+08:00",
+  "last_changed_sync": "2026-11-21T08:49:28+08:00",
   "items": [
+    {
+      "id": "mihoyo-167406",
+      "source": "mihoyo",
+      "source_uid": "273",
+      "title": "《绝区零》3.4 版本「长日终尽」前瞻特别节目",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "全新虚狩、首位结使代理人「挽昼」即将登场！3.4版本期间，登录即可领取联动S级限定代理人「知更鸟」！12月2日，不见不散！"
+        },
+        {
+          "type": "paragraph",
+          "text": "本次特别节目中的一切人物、故事、设定仅为节目包装，均与《绝区零》原作无关，展示画面与奖励等均为开发中内容，实际内容请以正式上线为准。"
+        },
+        {
+          "type": "paragraph",
+          "text": "另外，本次特别节目中的兑换码将于11月22日 23:59:59失效，记得尽快兑换哦~"
+        },
+        {
+          "type": "paragraph",
+          "text": "出镜嘉宾：阿朋、coma、ZK、十代、LK、小摇、小y、小F、振宇[ZYL]"
+        },
+        {
+          "type": "paragraph",
+          "text": "—— 欢迎来到罗斯凯利法！——"
+        }
+      ],
+      "images": [],
+      "published_at": "2026-11-20T19:35:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zzz.mihoyo.com/news/167406",
+      "is_pinned": false,
+      "content_hash": "af98fe1ee8c3f5d8f43eeec1d7ad24570642dfbd1f276ac2cb8658870b62d174",
+      "ingest": "feed"
+    },
+    {
+      "id": "hoyo-167399",
+      "source": "hoyoverse",
+      "source_uid": "288",
+      "title": "《绝区零》3.4版本「长日终尽」前瞻特别节目丨情报总览",
+      "category": "other",
+      "summary": "这条资讯来自《绝区零》官网。完整内容请查看官方原文。",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "长日终尽"
+        },
+        {
+          "type": "paragraph",
+          "text": "——愿天空澄澈，灯塔长明。"
+        },
+        {
+          "type": "paragraph",
+          "text": "全新代理人「挽昼」、「卡芙卡」、「知更鸟」即将登场！"
+        },
+        {
+          "type": "paragraph",
+          "text": "更有全新皮肤、代理人调频复刻、全新剧情和活动玩法将在3.4版本与绳匠见面，敬请期待！"
+        },
+        {
+          "type": "paragraph",
+          "text": "本次特别节目中的兑换码将于11月22日 23:59:59 (UTC+8) 失效，记得及时兑换哦~"
+        },
+        {
+          "type": "paragraph",
+          "text": "查看下方图片，回顾本次特别节目精彩内容！"
+        }
+      ],
+      "images": [],
+      "published_at": "2026-11-20T19:35:00+08:00",
+      "updated_at": null,
+      "source_url": "https://zenless.hoyoverse.com/zh-cn/news/167399",
+      "is_pinned": false,
+      "content_hash": "a1087710991a6c5368a45c72af4aebe8079a8753850f5a1b3cae6bf22eb91429",
+      "ingest": "feed"
+    },
     {
       "id": "mihoyo-167393",
       "source": "mihoyo",
